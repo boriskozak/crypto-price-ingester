@@ -21,7 +21,7 @@ function getCurrent() {
       results = JSON.parse(output).result;
       for (var key in results) {
         // iterate over the results, only include the currency we're tracking
-        if (key.includes(currency)) {
+        if (key.includes(currency) && !key.includes("quo")) {
           var exchange = key.split(":")[0]
           var coin = key.split(":")[1].split(currency)[0]
           var price = results[key].price.last
