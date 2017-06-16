@@ -1,3 +1,6 @@
+exports.handler = function(event, context, callback) {
+
+
 var fetch = require('node-fetch');
 var metrics = require('datadog-metrics');
 
@@ -38,3 +41,5 @@ function getCurrent() {
 
 // entry point
 getCurrent();
+
+}
